@@ -1,1 +1,3 @@
 # pre-examen
+
+.env agregado
