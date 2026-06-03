@@ -1,6 +1,5 @@
 from dotenv import load_dotenv
 import os
-import json  # no se usa
 
 load_dotenv()
 
@@ -15,6 +14,18 @@ def mostrar_config(app, version, debug):
     else:
         print(f"App: {app} v{version}")
     return {"app": app, "version": version, "debug": debug}
+
+
+def calcular_promedio(notas):
+    """
+    Calcula el promedio de una lista de notas.
+
+    :param notas: lista de números
+    :return: promedio de las notas
+    """
+    if not notas:
+        return 0
+    return sum(notas) / len(notas)
 
 
 config = mostrar_config(app, version, debug)
